@@ -69,6 +69,7 @@ sumaTresNumerosa()
 // console.log(sumaTresNumerosa())
 
 //OPCIÓN 3 -BY SOFIA 
+/*
 function sumaTresNumerosa(a, b, c) {
     a = prompt("Introduzca primer número");
     a = +a;
@@ -89,13 +90,26 @@ function sumaTresNumerosa(a, b, c) {
     }
 }
 sumaTresNumerosa()
-
+*/
 // Crea la función primerosTresCaracteres que reciba un string como argumento y devuelva los tres primeros caracteres del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de tres caracteres, debe devolver el string completo.
 
-// function primerosTresCaracteres(string) {
-
-    
-// }
+function primerosTresCaracteres(cadena) {
+    cadena = prompt ("Por favor introduce un dato");
+    // cadena = +cadena;
+    console.log(typeof cadena);
+          if ((isNaN(cadena)) && (typeof cadena == 'number')){
+        console.log('Debo ser ejecutada con un string');
+          } else if (cadena.length < 3) {
+            console.log(cadena);
+          } else {
+            console.log(cadena.slice(0,3));
+          }
+}
+primerosTresCaracteres()
+// (isNaN(cadena)) && 
+// let cadena = 'Bootcampin'
+// console.log(cadena.length)
+// console.log(cadena.substring(0,4)+' '+ cadena.substring(9,10))
 
 // Crea la función getPrecioMostrarIVA para que devuelva una cadena de texto con formato precio con dos decimales y con el IVA ya incluido. Para 2 debería devolver 2.42 € (suponiendo un IVA del 21%). Si la función no recibe un número debería devolver devolver 'no es un formato correcto'.
 
