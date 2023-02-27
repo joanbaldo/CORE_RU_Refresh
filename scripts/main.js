@@ -32,9 +32,9 @@ imserso()
 */
 // Crea la función sumaTresNumeros que reciba tres números como argumento y devuelva la suma de los mismos. Si alguno de los argumentos no es un número, debe devolver el string "Debo ser ejecutada con números".
 
-
+// Opción 1 y 2 son PRE-SOFIA
 // opcion 1 "Consoleando en el própio return"
-
+/*
 function sumaTresNumerosa(a, b, c) {
     a = prompt("Introduzca primer número");
     a = +a; //-> forzamos a convertir "lo que sea" a num y si no puede =dara como resultado NaN así que si una de las tres variables se suma como "NaN" el resultado que se consoleara será "NaN"
@@ -53,7 +53,7 @@ function sumaTresNumerosa(a, b, c) {
     }
 }
 sumaTresNumerosa()
-
+*/
 // opcion 2 "Consoleando al llamar a la función"
 
 // function sumaTresNumerosa(a, b, c) {
@@ -68,6 +68,27 @@ sumaTresNumerosa()
 // }
 // console.log(sumaTresNumerosa())
 
+//OPCIÓN 3 -BY SOFIA 
+function sumaTresNumerosa(a, b, c) {
+    a = prompt("Introduzca primer número");
+    a = +a;
+    console.log(typeof a)
+    console.log(isNaN(a))
+    b = prompt("Introduzca segundo número");
+    b = +b; 
+    console.log(typeof b)
+    console.log(isNaN(b))
+    c = prompt("Introduzca segundo número");
+    c = +c; 
+    console.log(typeof c)
+    console.log(isNaN(c))
+    if ( isNaN(a) || isNaN(b) || isNaN(c) ) {
+        console.log('Debo ser ejecutada con números');
+    } else {
+        console.log(a + b + c);
+    }
+}
+sumaTresNumerosa()
 
 // Crea la función primerosTresCaracteres que reciba un string como argumento y devuelva los tres primeros caracteres del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de tres caracteres, debe devolver el string completo.
 
