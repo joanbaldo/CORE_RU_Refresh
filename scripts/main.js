@@ -3,7 +3,7 @@
 // EJERCICIOS REPASO RAMP UP - FUNCIONES
 
 // Crea una función multiplicacion que espere dos parámetros a y b y que devuelva la multiplicación de los mismos.
-/*
+
 function multiplicacion(a, b) {
     a = prompt("Introduzca primer número");
     a = +a;
@@ -12,9 +12,9 @@ function multiplicacion(a, b) {
     return a * b;
 }
 console.log(multiplicacion(2, 5))
-*/
+
 // Crea un programa que pida al usuario su edad y, dependiendo de la misma, muestre por consola uno de los siguientes mensajes: "Eres menor de edad", "Eres mayor de edad" o "Eres un adulto mayor". Debes utilizar un condicional if/else.
-/*
+
 function imserso(edad) {
     edad = prompt("Porfavor introduce tu edad");
     edad = +edad;
@@ -29,12 +29,12 @@ function imserso(edad) {
 
 }
 imserso()
-*/
+
 // Crea la función sumaTresNumeros que reciba tres números como argumento y devuelva la suma de los mismos. Si alguno de los argumentos no es un número, debe devolver el string "Debo ser ejecutada con números".
 
 // Opción 1 y 2 son PRE-SOFIA
 // opcion 1 "Consoleando en el própio return"
-/*
+
 function sumaTresNumerosa(a, b, c) {
     a = prompt("Introduzca primer número");
     a = +a; //-> forzamos a convertir "lo que sea" a num y si no puede =dara como resultado NaN así que si una de las tres variables se suma como "NaN" el resultado que se consoleara será "NaN"
@@ -53,7 +53,7 @@ function sumaTresNumerosa(a, b, c) {
     }
 }
 sumaTresNumerosa()
-*/
+
 // opcion 2 "Consoleando al llamar a la función"
 
 // function sumaTresNumerosa(a, b, c) {
@@ -69,7 +69,7 @@ sumaTresNumerosa()
 // console.log(sumaTresNumerosa())
 
 //OPCIÓN 3 -BY SOFIA 
-/*
+
 function sumaTresNumerosa(a, b, c) {
     a = prompt("Introduzca primer número");
     a = +a;
@@ -90,11 +90,11 @@ function sumaTresNumerosa(a, b, c) {
     }
 }
 sumaTresNumerosa()
-*/
+
 // Crea la función primerosTresCaracteres que reciba un string como argumento y devuelva los tres primeros caracteres del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de tres caracteres, debe devolver el string completo.
 
 // No me funciona lavalidación con "isNaN" ya que si una cadena NO es un numero O No es un NaN (= true) ya asume que es un string (porque obviamente con el prompt no metes un array o un objeto)
-/*
+
 function primerosTresCaracteres(cadena) {
     cadena = prompt ("Por favor introduce un dato");
     // cadena = +cadena;
@@ -108,7 +108,7 @@ function primerosTresCaracteres(cadena) {
           }
 }
 primerosTresCaracteres()
-*/
+
 //REPASO PREVIO 
 // (isNaN(cadena)) && 
 // let cadena = 'Bootcampin'
@@ -116,7 +116,7 @@ primerosTresCaracteres()
 // console.log(cadena.substring(0,4)+' '+ cadena.substring(9,10))
 
 // Crea la función getPrecioMostrarIVA para que devuelva una cadena de texto con formato precio con dos decimales y con el IVA ya incluido. Para 2 debería devolver 2.42 € (suponiendo un IVA del 21%). Si la función no recibe un número debería devolver devolver 'no es un formato correcto'.
-/*
+
 function getPrecioMostrarIVA (importe) {
     importe = prompt ("Porfavor introduzca importe");
     importe = +importe;
@@ -129,11 +129,24 @@ function getPrecioMostrarIVA (importe) {
     }
 } 
 getPrecioMostrarIVA()
-*/
+
 
 // EJERCICIOS EXTRA RAMP UP
 
 //Crea la función penultimoCaracter que reciba un string como argumento y devuelva el penúltimo carácter del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de dos caracteres, debe devolver el primer carácter.
+
+function penultimoCaracter(palabra) {
+    if (typeof palabra !== 'string') {
+        return'Debo ser ejecutada con un string'
+    } else if (palabra.length < 2){
+        return palabra.substring(0,1)
+    } else{
+        return palabra.slice(-2,-1)
+    }
+}
+console.log(penultimoCaracter(12))
+console.log(penultimoCaracter('Fe'))
+console.log(penultimoCaracter('Sophie'))
 
 
 //Crea la función cuentaVocales que reciba un string como argumento y devuelva el número de vocales que contiene. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string".
@@ -147,3 +160,14 @@ function cuentaVocales(vocablo) {
 
 
 //Crea la función potencia que acepte como argumento dos números y devuelva el resultado de elevar el primer número a la potencia del segundo número.
+
+//He añadido PROMPT + VALIDACiÓN
+/*
+function potencia(a,b) {
+    a = prompt ("Introduce BASE");
+    a = +a
+    a = prompt ("Introduce POTENCIA");
+    b = +b
+    
+}
+*/
