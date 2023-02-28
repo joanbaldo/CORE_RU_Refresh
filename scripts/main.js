@@ -93,6 +93,8 @@ sumaTresNumerosa()
 */
 // Crea la función primerosTresCaracteres que reciba un string como argumento y devuelva los tres primeros caracteres del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de tres caracteres, debe devolver el string completo.
 
+// No me funciona lavalidación con "isNaN" ya que si una cadena NO es un numero O No es un NaN (= true) ya asume que es un string (porque obviamente con el prompt no metes un array o un objeto)
+/*
 function primerosTresCaracteres(cadena) {
     cadena = prompt ("Por favor introduce un dato");
     // cadena = +cadena;
@@ -106,19 +108,42 @@ function primerosTresCaracteres(cadena) {
           }
 }
 primerosTresCaracteres()
+*/
+//REPASO PREVIO 
 // (isNaN(cadena)) && 
 // let cadena = 'Bootcampin'
 // console.log(cadena.length)
 // console.log(cadena.substring(0,4)+' '+ cadena.substring(9,10))
 
 // Crea la función getPrecioMostrarIVA para que devuelva una cadena de texto con formato precio con dos decimales y con el IVA ya incluido. Para 2 debería devolver 2.42 € (suponiendo un IVA del 21%). Si la función no recibe un número debería devolver devolver 'no es un formato correcto'.
-
+/*
+function getPrecioMostrarIVA (importe) {
+    importe = prompt ("Porfavor introduzca importe");
+    importe = +importe;
+    if ( isNaN(importe)) {
+        console.log('No es un formato correcto');
+    } else {
+        // console.log(importe);
+        let totalConIva = importe *1.21;
+        return console.log(totalConIva.toFixed(2) + "€");
+    }
+} 
+getPrecioMostrarIVA()
+*/
 
 // EJERCICIOS EXTRA RAMP UP
 
 //Crea la función penultimoCaracter que reciba un string como argumento y devuelva el penúltimo carácter del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de dos caracteres, debe devolver el primer carácter.
 
+
 //Crea la función cuentaVocales que reciba un string como argumento y devuelva el número de vocales que contiene. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string".
+function cuentaVocales(vocablo) {
+    if (typeof vocablo !== 'string') {
+        return'Debo ser ejecutada con un string'
+    } else {
+        // W.I.P
+            }
+}
+
 
 //Crea la función potencia que acepte como argumento dos números y devuelva el resultado de elevar el primer número a la potencia del segundo número.
-
